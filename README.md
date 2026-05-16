@@ -51,5 +51,5 @@ This project applies rigorous regression analysis techniques to the Ames Housing
 * **Machine Learning Benchmark:** Compare the inferential model against tree-based ensemble methods (e.g., XGBoost, Random Forests) to evaluate prediction trade-offs.
 
 ---
-**Author:** Ayush Chaudhary  
+**Author:** Ayush Choudhary  
 *Graduate Student, Data Analytics*
