@@ -1,92 +1,55 @@
 # Housing Price Regression Analysis (Ames Dataset)
 
 ## Overview
-
-This project applies regression analysis techniques to the Ames Housing dataset to understand the relationship between housing features and sale price. The goal is to build a statistically valid model while carefully evaluating assumptions and applying corrective measures where needed.
-
----
+This project applies rigorous regression analysis techniques to the Ames Housing dataset to model residential property values. Rather than focusing solely on raw predictive metrics, the primary objective is to build a **statistically valid multiple linear regression model** by systematically evaluating core assumptions and implementing advanced remedial measures for violations.
 
 ## Objectives
+* Build a robust multiple linear regression model to predict and interpret housing prices.
+* Systematically evaluate classical linear regression model (CLRM) assumptions.
+* Diagnose and apply formal remedial measures for assumption violations (e.g., heteroskedasticity, non-normality).
+* Maximize both the interpretability of coefficients and predictive performance.
 
-* Build a multiple linear regression model for housing prices
-* Evaluate model assumptions (normality, homoscedasticity, etc.)
-* Apply remedial measures when assumptions are violated
-* Improve model performance and interpretability
-
----
-
-## Dataset
-
-* Ames Housing Dataset
-* Contains detailed residential property data such as size, location, quality, and sale price
-* Dataset Available on kaggel. 
-
----
+## 📊 Dataset
+* **Source:** Ames Housing Dataset (Available on [[Kaggle](https://www.kaggle.com/))](https://www.kaggle.com/datasets/shashanknecrothapa/ames-housing-dataset)
+* **Description:** Contains detailed residential property records from Ames, Iowa, featuring high-dimensional data points across structural quality, space, location, and transactional metrics.
 
 ## Methodology
 
-### 1. Data Preparation
+### 1. Data Preparation & Preprocessing
+* Handled missing data structures and encoded categorical variables.
+* Multi-collinearity diagnosis using Variance Inflation Factors (VIF) to refine feature selection.
 
-* Data cleaning and preprocessing
-* Handling missing values
-* Feature selection
+### 2. Baseline Modeling & Diagnostics
+* Fitted an initial Multiple Linear Regression (OLS) model.
+* Conducted residual diagnostics via Q-Q plots, Residual vs. Fitted plots, and formal statistical testing.
 
-### 2. Initial Model
+### 3. Assumption Testing & Issues Identified
+* **Non-Normality:** Residuals exhibited right-skewness, failing the Shapiro-Wilk test.
+* **Heteroskedasticity:** Non-constant variance detected across the predicted spectrum (confirmed via Breusch-Pagan test).
 
-* Multiple linear regression model
-* Evaluation using R² and residual diagnostics
+### 4. Remedial Measures & Advanced Modeling
+* **Log-Transformation:** Applied a natural log transformation to the response variable (`SalePrice`) to stabilize variance and normalize errors.
+* **Generalized Least Squares (GLS):** Employed a GLS approach (via the `nlme` package) to model the error structure directly and correct for non-constant variance.
 
-### 3. Assumption Testing
-
-* Normality of residuals
-* Homoscedasticity (constant variance)
-* Linearity
-* Independence
-
-### 4. Issues Identified
-
-* Non-normal residual distribution
-* Presence of heteroscedasticity
-
-### 5. Remedial Measures
-
-* Log transformation of response variable
-* Generalized Least Squares (GLS) approach
-* Model re-evaluation after corrections
-
----
-
-## Results
-
-* Improved model fit after transformations
-* Better adherence to regression assumptions
-* More reliable coefficient estimates
-
----
+## Results & Impact
+* **Assumption Alignment:** Log transformations and GLS corrections successfully mitigated heteroskedasticity and restored residual normality.
+* **Model Fidelity:** Improved model fit
+* **Reliability:** Standard errors were successfully corrected, ensuring that coefficient p-values are valid for reliable real-world statistical inference.
 
 ## Tools & Technologies
+* **Language:** R
+* **Core Packages:** `tidyverse` (dplyr, ggplot2), `car` (VIF & companion diagnostics), `nlme` (GLS modeling), `lmtest`
 
-* R
-* Libraries: (e.g., ggplot2, dplyr, nlme, car)
+## 🧠 Key Takeaways
+* **Production-Ready Rigor:** Prioritized statistical validity and strict CLRM assumption testing over blind hyperparameter tuning, ensuring the model's insights are reproducible and reliable.
+* **Feature Engineering & Transformations:** Utilized log-transformations and structural modeling modifications (GLS) to elegantly fix structural errors in messy, real-world data patterns.
+* **Balanced Evaluation:** Proved that optimizing for inference and coefficient integrity is just as critical as chasing raw predictive performance.
 
----
-
-## Key Takeaways
-
-* Checking assumptions is critical in regression modeling
-* Transformations can significantly improve model validity
-* Statistical rigor is as important as predictive performance
-
----
-
-## Future Improvements
-
-* Try non-linear models
-* Use regularization techniques (Lasso/Ridge)
-* Compare with machine learning models
+## 🚀 Future Improvements
+* **Regularization:** Implement Ridge and Lasso regression to handle high-dimensional feature spaces and prevent overfitting.
+* **Non-Linear Extensions:** Explore generalized additive models (GAMs) to capture non-linear trends smoothly.
+* **Machine Learning Benchmark:** Compare the inferential model against tree-based ensemble methods (e.g., XGBoost, Random Forests) to evaluate prediction trade-offs.
 
 ---
-
-## Author
-
-Ayush Choudhary 
+**Author:** Ayush Chaudhary  
+*Graduate Student, Data Analytics*
