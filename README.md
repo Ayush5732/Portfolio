@@ -6,7 +6,7 @@ This project applies regression analysis techniques to the Ames Housing dataset 
 
 ---
 
-## 📊 Objectives
+## Objectives
 
 * Build a multiple linear regression model for housing prices
 * Evaluate model assumptions (normality, homoscedasticity, etc.)
@@ -15,14 +15,15 @@ This project applies regression analysis techniques to the Ames Housing dataset 
 
 ---
 
-## 🗂️ Dataset
+## Dataset
 
 * Ames Housing Dataset
 * Contains detailed residential property data such as size, location, quality, and sale price
+* Dataset Available on kaggel. 
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 ### 1. Data Preparation
 
@@ -55,7 +56,7 @@ This project applies regression analysis techniques to the Ames Housing dataset 
 
 ---
 
-## 📈 Results
+## Results
 
 * Improved model fit after transformations
 * Better adherence to regression assumptions
@@ -63,21 +64,14 @@ This project applies regression analysis techniques to the Ames Housing dataset 
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 
 * R
 * Libraries: (e.g., ggplot2, dplyr, nlme, car)
 
 ---
 
-## 📁 Project Structure
-
-* `code/` → R scripts for analysis
-* `report/` → Final report (no code)
-
----
-
-## 🚀 Key Takeaways
+## Key Takeaways
 
 * Checking assumptions is critical in regression modeling
 * Transformations can significantly improve model validity
@@ -85,7 +79,7 @@ This project applies regression analysis techniques to the Ames Housing dataset 
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 * Try non-linear models
 * Use regularization techniques (Lasso/Ridge)
@@ -93,6 +87,6 @@ This project applies regression analysis techniques to the Ames Housing dataset 
 
 ---
 
-## 👤 Author
+## Author
 
-[Your Name]
+Ayush Choudhary 
